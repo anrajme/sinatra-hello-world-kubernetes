@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: sinatra-service
+spec:
+  selector:
+    app: sinatra
+  ports:
+    - protocol: TCP
+      port: 4567
+      targetPort: 4567
+  type: LoadBalancer
